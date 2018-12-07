@@ -401,3 +401,102 @@
 # # while c >= 2:
 # #     print('\033[31;1mYOULOSE!!!!\033[0m')
 # #     break
+# import random
+# www = ['石头','剪刀','布']
+# words = random.choice (['石头','剪刀','布'])
+# yonghu = input('请猜拳：')
+# if words == yonghu :
+#     print('电脑：',words)
+#     print('用户',yonghu)
+#     print ('平手')
+# elif yonghu == www[0] and words ==www[1]:
+#     print('电脑：',www[1])
+#     print('用户：',www[0])
+#     print ('你赢了')
+# elif yonghu == www[1] and words ==www[2]:
+#     print('电脑：',www[2])
+#     print('用户：',www[1])
+#     print ('你赢了')
+# elif yonghu == www[2] and words ==www[0]:
+#     print('电脑：',www[0])
+#     print('用户：',www[2])
+#     print ('你赢了')
+# elif yonghu == www[2] and words ==www[1]:
+#     print('电脑：',www[1])
+#     print('用户：',www[2])
+#     print ('你输了')
+# elif yonghu == www[0] and words ==www[2]:
+#     print('电脑：',www[2])
+#     print('用户：',www[0])
+#     print ('你输了')
+# elif yonghu == www[1] and words ==www[0]:
+#     print('电脑：',www[0])
+#     print('用户：',www[1])
+#     print ('你输了')
+# else:
+#     print('电脑：',words)
+#     print('用户',yonghu)
+#     print('你输了')
+# import random
+# choice = ['石头','剪刀','布']
+# ww = [['石头','剪刀'],['剪刀','布'],['布','石头']]
+# pooo = """(0) 石头
+# (1) 剪刀
+# (2) 布
+# 请猜拳(0/1/2)"""
+# a = 0
+# b = 0
+# c = 0
+# while a < 3:
+#     a += 1
+#     pc = random.choice(['石头', '剪刀', '布'])
+#     index = int(input(pooo))
+#     user2 = choice[index]
+#     while user2 == pc:
+#         break
+#     if  [user2,pc] in ww :
+#         print('电脑猜拳：', pc, '你的猜拳：', user2)
+#         print ('\033[31;1m正确\033[0m')
+#         b += 1
+#         continue
+#     else:
+#         print('电脑猜拳：', pc, '你的猜拳：', user2)
+#         print ('\033[31;1m错误\033[0m')
+#         c += 1
+#         continue
+# while b == 1:
+#     print('\033[31;1mYOUWIN!!!!\033[0m')
+#     break
+# while c == 1:
+#     print('\033[31;1mYOULOSE!!!!\033[0m')
+#     break
+# import random
+# all_choice=['石头','剪刀','布']
+# win_list=[['石头','剪刀'],['剪刀','布'],['布','石头']]
+# po="""(0) 石头
+# (1) 剪刀
+# (2) 布
+# 请输入(0/1/2)"""
+import random
+all_choice=['石头','剪刀','布']
+win_list=[['石头','剪刀'],['剪刀','布'],['布','石头']]
+po="""(0) 石头
+(1) 剪刀
+(2) 布
+请输入(0/1/2)"""
+c=0
+p=0
+while c <2 and p<2:
+    pc=random.choice(all_choice)
+    ind=int(input(po))
+    u = all_choice[ind]
+    print('ni:  %s,pc: %s'%(u,pc))
+    if u == pc:
+        print ('平局！！！')
+    elif [u ,pc]in win_list:
+        p+=1
+        print('你赢了！！！！！')
+    else:
+        c+=1
+        print('你输了！！！！！！！！！！！！！！！！！！')
+
